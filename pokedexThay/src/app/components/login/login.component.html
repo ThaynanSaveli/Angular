@@ -1,0 +1,24 @@
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+      <div class="container" style="text-align: center;">
+        <img src="../../../assets/images/logo.png" width="250" alt="">
+        <mat-form-field appearance="fill" class="mt-3">
+          <mat-label>Digite seui e-mail</mat-label>
+          <input matInput placeholder="exemplo@teste.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="container mt-3 mb-3">
+        <mat-form-field appearance="fill">
+          <mat-label>Digite sua senha</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="container mt-3 mb-3" style="text-align: center;">
+        <button mat-raised-button color="primary" (click)="listaDePokemons()">Entrar <span class="material-icons">login</span></button>
+      </div>
+  </mat-card>
+</div>
