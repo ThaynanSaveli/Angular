@@ -1,17 +1,50 @@
-.sidenav-container {
-  height: 100%;
+mat-card {
+  max-width: 500px;
 }
 
-.sidenav {
-  width: 200px;
+.mt-5{
+  margin-top: 20px !important;
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
+.mt-1{
+  margin-top: 5px !important;
 }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
+.text-center{
+  text-align: center;
+}
+
+.nome-pokemon{
+  text-transform: uppercase;  
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 100%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #2892fd;
+}
+
+mat-card{
+  width: 30%;
+  margin: auto;
+  margin-top: 22px;
+  background-color: #f0fffe;
+}
+
+.mat-card-image{
+  width: calc(50% + 32px);
 }

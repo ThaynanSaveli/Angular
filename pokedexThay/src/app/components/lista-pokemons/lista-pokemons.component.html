@@ -1,15 +1,21 @@
-<h1 class="text-center mt-5"><b>Listagem de Pokemons</b></h1>
+<app-header></app-header>
+
+<h1 class="text-center mt-5"><b>Lista de Pokemons</b></h1>
 <mat-grid-list cols="4" rowHeight="2:1">
     <mat-grid-tile *ngFor="let a of data; let index = index">
-        <mat-card class="mat-elevation-z12">
-            <mat-card-header >
+        <mat-card class="mat-elevation-z12" style="display: flex !important;">
+            <mat-card-header class="alinhar-vertical">
                 <div mat-card-avatar style="background-image: url('{{data[index].imagem}}'); background-size: cover;"></div>
                 <div class="text-center" style="width: 100%;">
                     <mat-card-title class="text-center nome-pokemon">{{data[index].nome}}</mat-card-title>
-                    <mat-card-subtitle class="text-center">Dog Breed</mat-card-subtitle>
-                    <button mat-raised-button color="primary" class="text-center" (click)="listaDePokemons()">Detalhes <span class="material-icons">add</span></button>
+                    <mat-card-subtitle class="text-center" style="text-transform: capitalize;">
+                        <span class="badge badge-primary" [ngStyle]="{'background-color': data[index].cor}">{{data[index].tipo.tipo}}</span>
+                    </mat-card-subtitle>
+                    <button mat-raised-button color="primary" class="text-center" (click)="getDetalhePokemon(data[index])"><span class="material-icons" style="font-size: 18px;">add</span> Detalhes</button>
                 </div>
             </mat-card-header>
         </mat-card>
     </mat-grid-tile>
 </mat-grid-list>
+
+<app-footer></app-footer>

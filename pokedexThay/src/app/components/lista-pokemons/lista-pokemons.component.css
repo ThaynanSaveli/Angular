@@ -1,5 +1,10 @@
 mat-card{
   width: 85%;
+  height: 70%;
+}
+
+mat-card:hover{
+  background-color: #f0fffe;
 }
 
 .mt-1{
@@ -27,4 +32,33 @@ mat-card{
   text-transform: uppercase;  
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
+}
+
+.mat-raised-button {
+  line-height: 30px;
+  padding: 0px 10px;
+}
+
+.alinhar-vertical{
+    margin-bottom: auto !important;
+    margin-top: auto !important;
+    width: 100% !important;
+}
+
+.badge {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #2892fd;
 }

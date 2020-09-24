@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div class="text-center">
+    <mat-card class="mt-5">
+        <img mat-card-image src="{{ fotoPokemon }}" alt="Pokemon">
+        <mat-card-title class="nome-pokemon">{{ pokemon.name }}</mat-card-title>
+        <mat-card-subtitle style="text-transform: capitalize;">
+            Espécie: <span class="badge badge-primary" [ngStyle]="{'background-color': corTipoPokemon}">{{ tipoPokemon }}</span>
+        </mat-card-subtitle>
+
+        <h3 class="mt-5" style="margin-bottom: 0px;"><b>Habilidades do Pokemon</b></h3><hr class="mt-1">
+        <mat-card-content class="text-center">
+            <mat-chip-list class="mat-chip-list-stacked" style="text-transform: capitalize;">
+                <mat-chip *ngFor="let habilidade of habilidades; let i = index" color="primary" selected>Habilidade {{i + 1}}: {{ habilidade }}</mat-chip>
+            </mat-chip-list>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="text-center mt-5" style='height: 34%;'>
+    <button mat-raised-button color="primary" (click)="voltarParaLista()"><span class="material-icons">west</span> Voltar</button>
+</div>
+
+<app-footer></app-footer>
